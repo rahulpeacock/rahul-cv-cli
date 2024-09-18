@@ -1,0 +1,33 @@
+{
+	"name": "rahul-portfolio-cli",
+	"version": "1.0.0",
+	"description": "chalk\r chalk-animation\r figlet\r gradient-string\r inquirer\r nanospinner",
+	"scripts": {
+		"dev": "ts-node src/index.ts",
+		"start": "pnpm run build && node build/index.js",
+		"build": "rimraf build && tsc",
+		"format": "pnpm biome format --write ./src",
+		"lint": "pnpm biome lint ./src --apply-unsafe",
+		"check": "pnpm biome check ./src --apply"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@clack/prompts": "^0.7.0",
+		"boxen": "^7.1.1",
+		"module-alias": "^2.2.3",
+		"picocolors": "^1.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.4.1",
+		"@types/module-alias": "^2.0.4",
+		"@types/node": "^20.10.5",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
+	},
+	"_moduleAliases": {
+		"@": "build"
+	}
+}
